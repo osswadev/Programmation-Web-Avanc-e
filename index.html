@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formulaire</title>
+</head>
+<body>
+    <h2>Entrez vos informations</h2>
+    <form method="POST" action="FormServlet">
+        Prénom : <input type="text" name="firstName"><br><br>
+        Nom : <input type="text" name="lastName"><br><br>
+        Date de naissance (mm/dd/yyyy) : <input type="text" name="birthDay"><br><br>
+
+        Sexe :
+        <input type="radio" name="sex" value="M" checked> Homme
+        <input type="radio" name="sex" value="F"> Femme
+        <br><br>
+
+        <input type="submit" value="Envoyer">
+    </form>
+</body>
+</html>

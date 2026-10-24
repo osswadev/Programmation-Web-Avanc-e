@@ -15,25 +15,24 @@ public class FirstServlet extends HttpServlet {
                           HttpServletResponse response)
             throws ServletException, IOException {
 
-        // 1. Recuperer les valeurs du formulaire
+
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String birthDay = request.getParameter("birthDay");
         String sex = request.getParameter("sex");
 
-        // 2. Creer les cookies
+
         Cookie c1 = new Cookie("firstName", firstName);
         Cookie c2 = new Cookie("lastName", lastName);
         Cookie c3 = new Cookie("birthDay", birthDay);
         Cookie c4 = new Cookie("sex", sex);
 
-        // 3. Envoyer les cookies au navigateur
+
         response.addCookie(c1);
         response.addCookie(c2);
         response.addCookie(c3);
         response.addCookie(c4);
 
-        // 4. Afficher les informations
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
